@@ -64,13 +64,23 @@ const MobileDrawer: React.FC = () => {
               p={8}
               spacing={4}
             >
-              {[["Home", "/"], ...routes].map(([title, href]) => (
-                <NextLink href={href} key={href}>
-                  <Link href={href} onClick={onClose}>
-                    {title}
-                  </Link>
-                </NextLink>
-              ))}
+              {[["Home", "/"], ...routes].map(
+                ([text, href, isExternal = false]) => (
+                  <React.Fragment key={href}>
+                    {isExternal ? (
+                      <Link href={href} isExternal onClick={onClose}>
+                        {text}
+                      </Link>
+                    ) : (
+                      <NextLink href={href} key={href}>
+                        <Link href={href} onClick={onClose}>
+                          {text}
+                        </Link>
+                      </NextLink>
+                    )}
+                  </React.Fragment>
+                ),
+              )}
             </DrawerBody>
 
             <DrawerFooter justifyContent="flex-start" px={4} py={8}>
