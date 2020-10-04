@@ -21,19 +21,21 @@ const Navbar: React.FC = () => {
       </NextLink>
 
       <HStack d={{ base: "none", md: "flex" }} spacing={0}>
-        {routes.map(([text, href, isExternal = false]) =>
-          isExternal ? (
-            <Link href={href} isExternal p={4}>
-              {text}
-            </Link>
-          ) : (
-            <NextLink href={href} key={href}>
-              <Link href={href} p={4}>
+        {routes.map(([text, href, isExternal = false]) => (
+          <React.Fragment key={href}>
+            {isExternal ? (
+              <Link href={href} isExternal p={4}>
                 {text}
               </Link>
-            </NextLink>
-          ),
-        )}
+            ) : (
+              <NextLink href={href} key={href}>
+                <Link href={href} p={4}>
+                  {text}
+                </Link>
+              </NextLink>
+            )}
+          </React.Fragment>
+        ))}
       </HStack>
 
       <HStack
