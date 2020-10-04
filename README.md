@@ -1,4 +1,3 @@
-# nextplate
+<!-- markdownlint-disable MD033 MD041 -->
 
-Your next Next.js template 🍽️
-
+[![Nextplate](./header.png)](https://nextplate.now.sh)
