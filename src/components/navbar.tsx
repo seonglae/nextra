@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { HStack, Icon, IconButton, Link, useColorMode } from "@chakra-ui/core";
+import { HStack, Icon, IconButton, Link, useColorMode } from "@chakra-ui/react";
 
 import { FaMoon } from "react-icons/fa";
 import NextLink from "next/link";

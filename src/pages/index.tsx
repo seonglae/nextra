@@ -1,9 +1,8 @@
 import * as React from "react";
 
-import { Button, Heading, Icon, Stack, Wrap } from "@chakra-ui/core";
+import { Button, Heading, Icon, Stack, Wrap, WrapItem } from "@chakra-ui/react";
 import { FaCode, FaGithub } from "react-icons/fa";
 
-import Link from "next/link";
 import Logo from "@/components/logo";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
@@ -22,19 +21,28 @@ const HomePage: NextPage = () => {
         </Heading>
 
         <Wrap justify="center" spacing={4}>
-          <Link href="/usage" passHref>
-            <Button as="a" colorScheme="yellow" leftIcon={<Icon as={FaCode} />}>
+          <WrapItem>
+            <Button
+              as="a"
+              colorScheme="yellow"
+              href="https://docs.nextplate.now.sh"
+              leftIcon={<Icon as={FaCode} />}
+              target="_blank"
+            >
               {" "}
               View usage
             </Button>
-          </Link>
-          <Button
-            as="a"
-            href={siteConfig.socials.GitHub}
-            leftIcon={<Icon as={FaGithub} />}
-          >
-            View source on GitHub
-          </Button>
+          </WrapItem>
+
+          <WrapItem>
+            <Button
+              as="a"
+              href={siteConfig.socials.GitHub}
+              leftIcon={<Icon as={FaGithub} />}
+            >
+              View source on GitHub
+            </Button>
+          </WrapItem>
         </Wrap>
       </Stack>
     </>

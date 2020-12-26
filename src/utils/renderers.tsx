@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Link as ChakraLink, Text } from "@chakra-ui/core";
+import { Link as ChakraLink, Text } from "@chakra-ui/react";
 
 export const baseRenderer = {
   link: function Link({ href, children }) {

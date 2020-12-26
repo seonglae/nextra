@@ -2,7 +2,7 @@ import "@/stylesheets/html.css";
 
 import * as React from "react";
 
-import { Box, ChakraProvider, Stack } from "@chakra-ui/core";
+import { Box, ChakraProvider, Stack } from "@chakra-ui/react";
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 
 import { AppContextProps } from "@/store/app";
@@ -67,7 +67,7 @@ function App(props: AppProps) {
       />
 
       <ChakraProvider resetCSS theme={theme}>
-        {/* @ts-expect-error */}
+        {/* @ts-expect-error `disableLayout` property exists */}
         {Component.disableLayout ? (
           <Component {...pageProps} />
         ) : (

@@ -8,7 +8,7 @@ import {
   LightMode,
   Link,
   Stack,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import type { GetServerSideProps, NextPage } from "next";
 
 import Logo from "@/components/logo";
@@ -63,8 +63,7 @@ const SocialImagePage: NextPage<SocialImageParameters> = ({
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
+// @ts-expect-error manually add `disableLayout` property
 SocialImagePage.disableLayout = true;
 
 export const getServerSideProps: GetServerSideProps<SocialImageParameters> = async ({
