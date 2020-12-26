@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
           spacing={1}
           textAlign="right"
         >
-          {routes.map(([text, href, isExternal = false]) => (
+          {routes.map(({ text, href, isExternal = false }) => (
             <React.Fragment key={href}>
               {isExternal ? (
                 <Link href={href} isExternal>

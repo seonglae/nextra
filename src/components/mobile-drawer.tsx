@@ -64,8 +64,8 @@ const MobileDrawer: React.FC = () => {
               p={8}
               spacing={4}
             >
-              {[["Home", "/"], ...routes].map(
-                ([text, href, isExternal = false]) => (
+              {[{ text: "Home", href: "/" }, ...routes].map(
+                ({ text, href, isExternal = false }) => (
                   <React.Fragment key={href}>
                     {isExternal ? (
                       <Link href={href} isExternal onClick={onClose}>

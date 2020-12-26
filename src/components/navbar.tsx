@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
       </NextLink>
 
       <HStack d={{ base: "none", md: "flex" }} spacing={0}>
-        {routes.map(([text, href, isExternal = false]) => (
+        {routes.map(({ text, href, isExternal = false }) => (
           <React.Fragment key={href}>
             {isExternal ? (
               <Link href={href} isExternal p={4}>
