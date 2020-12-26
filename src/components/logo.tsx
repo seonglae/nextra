@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { Box, Icon } from "@chakra-ui/core";
+import { Box, Icon } from "@chakra-ui/react";
 
-import type { IconProps } from "@chakra-ui/core";
+import type { IconProps } from "@chakra-ui/react";
 
 const Logo: React.FC<IconProps> = (props) => {
   return (
