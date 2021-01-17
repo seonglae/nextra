@@ -1,29 +1,12 @@
-import { extendTheme } from "@chakra-ui/react";
+import { theme as defaultTheme, extendTheme } from "@chakra-ui/react";
+
 import { mode } from "@chakra-ui/theme-tools";
 
-const sans = [
-  "Jost",
-  "-apple-system",
-  "BlinkMacSystemFont",
-  "'Segoe UI'",
-  "Roboto",
-  "Oxygen",
-  "Ubuntu",
-  "Cantarell",
-  "'Open Sans'",
-  "'Helvetica Neue'",
-  "sans-serif",
-].join(",");
+const body = `Jost,${defaultTheme.fonts.body}`;
+const heading = `Jost,${defaultTheme.fonts.heading}`;
+const mono = `Cousine,${defaultTheme.fonts.mono}`;
 
-const mono = [
-  "Cousine",
-  "Consolas",
-  "'Courier New'",
-  "Courier",
-  "monospace",
-].join(",");
-
-export default extendTheme({
+export const theme = extendTheme({
   components: {
     Link: {
       variants: {
@@ -34,8 +17,8 @@ export default extendTheme({
     },
   },
   fonts: {
-    body: sans,
-    heading: sans,
+    body,
+    heading,
     mono,
   },
 });
