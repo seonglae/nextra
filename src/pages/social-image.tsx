@@ -9,10 +9,11 @@ import {
   Link,
   Stack,
 } from "@chakra-ui/react";
-import type { GetServerSideProps, NextPage } from "next";
 
+import type { GetServerSideProps } from "next";
 import Logo from "@/components/logo";
 import Markdown from "react-markdown";
+import type { NextPage } from "@/types/next";
 import { NextSeo } from "next-seo";
 import type { SocialImageParams } from "@/types";
 import { baseRenderer } from "@/utils/renderers";
@@ -63,7 +64,6 @@ const SocialImagePage: NextPage<SocialImageParams> = ({
   );
 };
 
-// @ts-expect-error manually add `disableLayout` property
 SocialImagePage.disableLayout = true;
 
 export const getServerSideProps: GetServerSideProps<SocialImageParams> = async ({

@@ -5,12 +5,11 @@ import * as React from "react";
 import { Box, ChakraProvider, Stack } from "@chakra-ui/react";
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 
-import { AppContextProps } from "@/store/app";
+import type { AppProps } from "@/types/next";
 import Footer from "@/components/footer";
 import Head from "next/head";
 import NProgress from "nprogress";
 import Navbar from "@/components/navbar";
-import type { AppProps as NextAppProps } from "next/app";
 import Router from "next/router";
 import dynamic from "next/dynamic";
 import { theme } from "@/theme";
@@ -21,8 +20,6 @@ const MobileDrawer = dynamic(() => import("@/components/mobile-drawer"));
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
-
-type AppProps = NextAppProps & AppContextProps;
 
 function App(props: AppProps) {
   const { Component, pageProps, router } = props;
@@ -67,7 +64,6 @@ function App(props: AppProps) {
       />
 
       <ChakraProvider resetCSS theme={theme}>
-        {/* @ts-expect-error `disableLayout` property exists */}
         {Component.disableLayout ? (
           <Component {...pageProps} />
         ) : (
