@@ -6,16 +6,18 @@ import { Box, ChakraProvider, Stack } from "@chakra-ui/react";
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 
 import type { AppProps } from "@/types/next";
-import Footer from "@/components/footer";
+import { Footer } from "@/components/footer";
 import Head from "next/head";
 import NProgress from "nprogress";
-import Navbar from "@/components/navbar";
+import { Navbar } from "@/components/navbar";
 import Router from "next/router";
 import dynamic from "next/dynamic";
 import { theme } from "@/theme";
 import siteConfig from "~/site-config";
 
-const MobileDrawer = dynamic(() => import("@/components/mobile-drawer"));
+const MobileDrawer = dynamic(() =>
+  import("@/components/mobile-drawer").then((C) => C.MobileDrawer),
+);
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());

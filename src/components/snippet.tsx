@@ -1,5 +1,3 @@
-/* eslint-disable react/no-array-index-key */
-
 import * as React from "react";
 
 import Highlight, { Prism } from "prism-react-renderer";
@@ -13,7 +11,7 @@ interface SnippetProps {
   language: Language;
 }
 
-const Snippet: React.FC<SnippetProps> = ({ code, language }) => {
+export const Snippet: React.FC<SnippetProps> = ({ code, language }) => {
   return (
     <Box>
       <Highlight code={code} language={language} Prism={Prism} theme={theme}>
@@ -44,5 +42,3 @@ const Snippet: React.FC<SnippetProps> = ({ code, language }) => {
     </Box>
   );
 };
-
-export default Snippet;

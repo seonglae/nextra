@@ -4,7 +4,7 @@ import { Box, Icon } from "@chakra-ui/react";
 
 import type { IconProps } from "@chakra-ui/react";
 
-const Logo: React.FC<IconProps> = (props) => {
+export const Logo: React.FC<IconProps> = (props) => {
   return (
     <Icon viewBox="0 0 1024 1024" {...props}>
       <Box as="circle" cx="512" cy="512" r="512" fill="yellow.300" />
@@ -15,5 +15,3 @@ const Logo: React.FC<IconProps> = (props) => {
     </Icon>
   );
 };
-
-export default Logo;

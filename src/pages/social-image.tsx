@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 import type { GetServerSideProps } from "next";
-import Logo from "@/components/logo";
+import { Logo } from "@/components/logo";
 import Markdown from "react-markdown";
 import type { NextPage } from "@/types/next";
 import { NextSeo } from "next-seo";

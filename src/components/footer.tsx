@@ -16,7 +16,7 @@ import { baseRenderer } from "@/utils/renderers";
 import routes from "@/routes";
 import { useSocials } from "@/hooks/app";
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   const socials = useSocials();
 
   const content = `
@@ -79,5 +79,3 @@ const Footer: React.FC = () => {
     </Stack>
   );
 };
-
-export default Footer;

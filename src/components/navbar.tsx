@@ -8,7 +8,7 @@ import routes from "@/routes";
 import { useSocials } from "@/hooks/app";
 import siteConfig from "~/site-config";
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   const { toggleColorMode } = useColorMode();
   const socials = useSocials();
 
@@ -66,5 +66,3 @@ const Navbar: React.FC = () => {
     </HStack>
   );
 };
-
-export default Navbar;
