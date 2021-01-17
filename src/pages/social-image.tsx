@@ -14,11 +14,11 @@ import type { GetServerSideProps, NextPage } from "next";
 import Logo from "@/components/logo";
 import Markdown from "react-markdown";
 import { NextSeo } from "next-seo";
-import type { SocialImageParameters } from "@/types";
+import type { SocialImageParams } from "@/types";
 import { baseRenderer } from "@/utils/renderers";
 import siteConfig from "~/site-config";
 
-const SocialImagePage: NextPage<SocialImageParameters> = ({
+const SocialImagePage: NextPage<SocialImageParams> = ({
   title,
   description,
   path,
@@ -66,7 +66,7 @@ const SocialImagePage: NextPage<SocialImageParameters> = ({
 // @ts-expect-error manually add `disableLayout` property
 SocialImagePage.disableLayout = true;
 
-export const getServerSideProps: GetServerSideProps<SocialImageParameters> = async ({
+export const getServerSideProps: GetServerSideProps<SocialImageParams> = async ({
   query,
 }) => {
   const t = (query.title as string) || siteConfig.title;
