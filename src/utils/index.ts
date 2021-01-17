@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 import type { NextApiRequest } from "next";
 
 export const IS_DEV = process.env.NODE_ENV === "development";
@@ -15,16 +13,14 @@ export function absoluteUrl(
   let protocol = /^localhost(:\d+)?$/.test(host) ? "http:" : "https:";
 
   if (
-    req &&
-    req.headers["x-forwarded-host"] &&
+    req?.headers["x-forwarded-host"] &&
     typeof req.headers["x-forwarded-host"] === "string"
   ) {
     host = req.headers["x-forwarded-host"];
   }
 
   if (
-    req &&
-    req.headers["x-forwarded-proto"] &&
+    req?.headers["x-forwarded-proto"] &&
     typeof req.headers["x-forwarded-proto"] === "string"
   ) {
     protocol = `${req.headers["x-forwarded-proto"]}:`;
