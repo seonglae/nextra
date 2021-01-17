@@ -21,7 +21,7 @@ import routes from "@/routes";
 import { useSocials } from "@/hooks/app";
 import siteConfig from "~/site-config";
 
-const MobileDrawer: React.FC = () => {
+export const MobileDrawer: React.FC = () => {
   const { isOpen, onClose, onToggle } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -103,5 +103,3 @@ const MobileDrawer: React.FC = () => {
     </>
   );
 };
-
-export default MobileDrawer;
