@@ -4,7 +4,7 @@ import { Button, Heading, Icon, Stack, Wrap, WrapItem } from "@chakra-ui/react";
 import { FaCode, FaGithub } from "react-icons/fa";
 
 import Logo from "@/components/logo";
-import type { NextPage } from "next";
+import type { NextPage } from "@/types/next";
 import { NextSeo } from "next-seo";
 import siteConfig from "~/site-config";
 
