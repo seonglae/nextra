@@ -1,3 +1,6 @@
+// @ts-check
+
+/** @type {{text:string,href:string,isExternal?:boolean}[]} */
 const routes = [
   {
     text: "Usage",

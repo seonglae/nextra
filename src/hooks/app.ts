@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 import { FaGithub, FaTwitter } from "react-icons/fa";
 
 import type { IconType } from "react-icons/lib";
