@@ -1,11 +1,10 @@
+import qs from "querystring";
+import { IS_NOT_PROD, absoluteUrl } from "@/utils";
+
 import type { Browser } from "puppeteer";
 import type { NextApiHandler } from "next";
-import { absoluteUrl } from "@/utils";
 import chrome from "chrome-aws-lambda";
-import pptr from "puppeteer";
-import qs from "querystring";
-
-const isDev = process.env.NODE_ENV === "development";
+import puppeteer from "puppeteer";
 
 const handler: NextApiHandler = async (req, res) => {
   let browser: Browser = null;
@@ -20,12 +19,12 @@ const handler: NextApiHandler = async (req, res) => {
     const url = `${origin}/social-image?${query}`;
 
     browser = await chrome.puppeteer.launch({
-      args: isDev ? [] : chrome.args,
+      args: IS_NOT_PROD ? [] : chrome.args,
       defaultViewport: chrome.defaultViewport,
-      executablePath: isDev
-        ? pptr.executablePath()
+      executablePath: IS_NOT_PROD
+        ? puppeteer.executablePath()
         : await chrome.executablePath,
-      headless: isDev ? true : chrome.headless,
+      headless: IS_NOT_PROD ? true : chrome.headless,
       ignoreHTTPSErrors: true,
     });
     const page = await browser.newPage();
@@ -46,7 +45,7 @@ const handler: NextApiHandler = async (req, res) => {
     res.setHeader("content-type", "image/png");
     res.setHeader("cache-control", "public, max-age=604800");
     res.send(screenshot);
-  } catch (error) {
+  } catch (error: unknown) {
     res.status(500).json({ error });
   } finally {
     if (browser) {
