@@ -13,7 +13,7 @@ import Navbar from "@/components/navbar";
 import type { AppProps as NextAppProps } from "next/app";
 import Router from "next/router";
 import dynamic from "next/dynamic";
-import theme from "@/theme";
+import { theme } from "@/theme";
 import siteConfig from "~/site-config";
 
 const MobileDrawer = dynamic(() => import("@/components/mobile-drawer"));
