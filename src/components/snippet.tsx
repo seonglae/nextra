@@ -1,14 +1,14 @@
-import * as React from "react";
+import * as React from 'react'
 
-import Highlight, { Prism } from "prism-react-renderer";
+import Highlight, { Prism } from 'prism-react-renderer'
 
-import { Box } from "@chakra-ui/react";
-import type { Language } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/oceanicNext";
+import { Box } from '@chakra-ui/react'
+import type { Language } from 'prism-react-renderer'
+import theme from 'prism-react-renderer/themes/oceanicNext'
 
 interface SnippetProps {
-  code: string;
-  language: Language;
+  code: string
+  language: Language
 }
 
 export const Snippet: React.FC<SnippetProps> = ({ code, language }) => {
@@ -20,7 +20,7 @@ export const Snippet: React.FC<SnippetProps> = ({ code, language }) => {
             as="pre"
             borderRadius={4}
             className={className}
-            fontSize={{ base: "sm", md: "md" }}
+            fontSize={{ base: 'sm', md: 'md' }}
             overflow="auto"
             p={4}
             style={style}
@@ -40,5 +40,5 @@ export const Snippet: React.FC<SnippetProps> = ({ code, language }) => {
         {language} snippet
       </Box>
     </Box>
-  );
-};
+  )
+}

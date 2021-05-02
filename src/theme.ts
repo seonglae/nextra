@@ -1,5 +1,6 @@
 import { theme as defaultTheme, extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
+
 import siteConfig from '~/site-config'
 
 const body = `Jost,${defaultTheme.fonts.body}`

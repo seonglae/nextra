@@ -23,7 +23,7 @@ const HomePage: NextPage = () => {
             <Button
               as="a"
               bgColor={siteConfig.themeColor}
-              href="https://docs.nextplate.now.sh"
+              href="https://doc.seongland.com"
               leftIcon={<Icon as={FaCode} />}
               target="_blank"
             >

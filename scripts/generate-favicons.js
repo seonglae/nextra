@@ -1,12 +1,11 @@
 const favicons = require('favicons')
-
 const fs = require('fs')
 const path = require('path')
 
 const siteConfig = require('../site-config')
 
-module.exports = async () => {
-  return new Promise((resolve, reject) => {
+module.exports = async () =>
+  new Promise((resolve, reject) =>
     favicons(
       path.resolve(process.cwd(), 'src', 'public', 'favicon.png'),
       {
@@ -16,7 +15,7 @@ module.exports = async () => {
         appDescription: siteConfig.description,
         developerName: siteConfig.title,
         developerURL: siteConfig.url,
-        background: siteConfig.themeColor,
+        background: siteConfig.bgColor,
         theme_color: siteConfig.themeColor,
         icons: {
           android: true,
@@ -31,18 +30,13 @@ module.exports = async () => {
         logging: true,
       },
       async (error, { files, images }) => {
-        if (error) {
-          return reject(error)
-        }
-
+        if (error) return reject(error)
         await Promise.all(
           [...images, ...files].map(({ name, contents }) => {
             fs.writeFile(path.resolve(process.cwd(), 'public', name), contents, reject)
           }),
         )
-
         return resolve()
       },
-    )
-  })
-}
+    ),
+  )

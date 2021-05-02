@@ -1,9 +1,7 @@
 {
   "overrides": [
     {
-      "files": [
-        "src/pages/_document.tsx"
-      ],
+      "files": ["src/pages/_document.tsx"],
       "options": {
         "printWidth": 999
       }
