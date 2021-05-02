@@ -1,6 +1,4 @@
-const descriptionMd = `
-  An opinionated [Next.js](https://nextjs.org) template for your next plate 🍽️
-`
+const descriptionMd = `Nuxt Typescript Template`
 
 const description = descriptionMd
   .replace(/\[([^\]]+)\](\([^)]+\)|\[[^\]]+\])/g, '$1')
@@ -9,15 +7,16 @@ const description = descriptionMd
   .trim()
 
 module.exports = {
-  title: 'Nextplate',
+  title: 'Seongland',
   descriptionMd,
   description,
-  url: 'https://nextplate.now.sh',
+  url: 'https://www.seongland.com',
   twitterUsername: '@SeonglaeC',
   email: 'seongle3737@gmail.com',
   socials: {
-    GitHub: 'https://github.com/seonglae',
+    GitHub: 'https://github.com/seongland/seongland-ing',
     Twitter: 'https://twitter.com/SeonglaeC',
   },
+  bgColor: '#1A202C',
   themeColor: '#46c0aE',
 }
