@@ -1,16 +1,16 @@
-const favicons = require("favicons");
+const favicons = require('favicons')
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs')
+const path = require('path')
 
-const siteConfig = require("../site-config");
+const siteConfig = require('../site-config')
 
 module.exports = async () => {
   return new Promise((resolve, reject) => {
     favicons(
-      path.resolve(process.cwd(), "src", "public", "favicon.png"),
+      path.resolve(process.cwd(), 'src', 'public', 'favicon.png'),
       {
-        path: "/",
+        path: '/',
         appName: siteConfig.title,
         appShortName: siteConfig.title,
         appDescription: siteConfig.description,
@@ -32,21 +32,17 @@ module.exports = async () => {
       },
       async (error, { files, images }) => {
         if (error) {
-          return reject(error);
+          return reject(error)
         }
 
         await Promise.all(
           [...images, ...files].map(({ name, contents }) => {
-            fs.writeFile(
-              path.resolve(process.cwd(), "public", name),
-              contents,
-              reject,
-            );
+            fs.writeFile(path.resolve(process.cwd(), 'public', name), contents, reject)
           }),
-        );
+        )
 
-        return resolve();
+        return resolve()
       },
-    );
-  });
-};
+    )
+  })
+}

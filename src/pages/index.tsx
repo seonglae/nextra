@@ -1,20 +1,18 @@
-import * as React from "react";
+import * as React from 'react'
 
-import { Button, Heading, Icon, Stack, Wrap, WrapItem } from "@chakra-ui/react";
-import { FaCode, FaGithub } from "react-icons/fa";
+import { Button, Heading, Icon, Stack, Wrap, WrapItem } from '@chakra-ui/react'
+import { FaCode, FaGithub } from 'react-icons/fa'
+import { NextSeo } from 'next-seo'
 
-import { Logo } from "@/components/logo";
-import type { NextPage } from "@/types/next";
-import { NextSeo } from "next-seo";
-import siteConfig from "~/site-config";
+import siteConfig from '~/site-config'
+
+import type { NextPage } from '@/types/next'
 
 const HomePage: NextPage = () => {
   return (
     <>
       <NextSeo title={siteConfig.title} titleTemplate="%s" />
       <Stack alignItems="center" px={8} spacing={4} textAlign="center" w="full">
-        <Logo boxSize="full" maxW={48} />
-
         <Heading size="2xl">{siteConfig.title}</Heading>
         <Heading fontWeight="normal" pb={8} size="md">
           {siteConfig.description}
@@ -24,29 +22,25 @@ const HomePage: NextPage = () => {
           <WrapItem>
             <Button
               as="a"
-              colorScheme="yellow"
+              bgColor={siteConfig.themeColor}
               href="https://docs.nextplate.now.sh"
               leftIcon={<Icon as={FaCode} />}
               target="_blank"
             >
-              {" "}
+              {' '}
               View usage
             </Button>
           </WrapItem>
 
           <WrapItem>
-            <Button
-              as="a"
-              href={siteConfig.socials.GitHub}
-              leftIcon={<Icon as={FaGithub} />}
-            >
+            <Button as="a" href={siteConfig.socials.GitHub} leftIcon={<Icon as={FaGithub} />}>
               View source on GitHub
             </Button>
           </WrapItem>
         </Wrap>
       </Stack>
     </>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

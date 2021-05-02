@@ -1,21 +1,14 @@
 {
   "name": "seongland-ing",
-  "description": "An opinionated Next.js template for your next plate 🍽️",
+  "description": "Seognland Landing Page",
   "version": "2.0.0",
-  "repository": "https://github.com/grikomsn/nextplate.git",
-  "author": "Griko Nibras <git@griko.id>",
+  "repository": "https://github.com/seongland/seongland-ing.git",
+  "author": "Seonglae Cho <sungle3737@gmail.com>",
   "scripts": {
-    "now-build": "run-s \"build:**\"",
+    "dev": "next dev",
     "build": "env-cmd run-s \"build:**\"",
     "build:scripts": "node scripts/build.js",
-    "build:web": "next build && next-sitemap",
-    "clean": "rm \".next\" \"public/!(.gitkeep)\"",
-    "dev": "next dev",
-    "format": "run-p \"format:**\"",
-    "format:index": "prettier --write \"*.{js,json,md}\"",
-    "format:src": "prettier --write \"src/**/*.{css,js,ts,tsx}\"",
-    "type-check": "tsc --noEmit",
-    "validate": "run-s lint type-check"
+    "build:web": "next build && next-sitemap"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.1.4",
@@ -43,10 +36,9 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "copy": "^0.3.2",
+    "cross-fetch": "^3.1.4",
     "env-cmd": "^10.1.0",
-    "husky": "^4.3.8",
-    "import-sort-parser-typescript": "^6.0.0",
-    "lint-staged": "^10.5.3",
+    "eslint": "^7.25.0",
     "next-sitemap": "^1.4.5",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
@@ -55,11 +47,5 @@
   "browserslist": [
     "since 2017"
   ],
-  "importSort": {
-    ".js, .jsx, .ts, .tsx": {
-      "parser": "typescript",
-      "options": {}
-    }
-  },
   "license": "MIT"
 }
