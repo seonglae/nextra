@@ -1,5 +1,5 @@
 export interface SocialImageParams {
-  title: string;
-  description: string;
-  path: string;
+  title: string
+  description: string
+  path: string
 }

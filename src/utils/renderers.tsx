@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react'
 
-import { Link as ChakraLink, Text } from "@chakra-ui/react";
+import { Link as ChakraLink, Text } from '@chakra-ui/react'
 
 export const baseRenderer = {
   link({ href, children }) {
@@ -8,8 +8,8 @@ export const baseRenderer = {
       <ChakraLink href={href} isExternal variant="link">
         {children}
       </ChakraLink>
-    );
+    )
   },
 
   paragraph: Text,
-};
+}
