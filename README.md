@@ -1,11 +1,13 @@
 # Minimal Next JS Typescript Template
 
-[Demo](next-ts-template-ten.vercel.app)
+[Demo](https://next-ts-template-ten.vercel.app)
 
 ![Example Image](image/example.png)
 
 ## Get Started
 
+- `Use this template` Button on Github
+- Or Clone this Project
 ```bash
 git clone https://github.com/seonglae/next-ts-template
 yarn
