@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 import {
   Box,
@@ -13,26 +13,25 @@ import {
   Link,
   Stack,
   useDisclosure,
-} from "@chakra-ui/react";
-import { FaBars, FaTimes } from "react-icons/fa";
+} from '@chakra-ui/react'
+import { FaBars, FaTimes } from 'react-icons/fa'
 
-import NextLink from "next/link";
-import routes from "@/routes";
-import { useSocials } from "@/hooks/app";
-import siteConfig from "~/site-config";
+import NextLink from 'next/link'
+import { useSocials } from '@/hooks/app'
+import siteConfig from '~/site-config'
 
 export const MobileDrawer: React.FC = () => {
-  const { isOpen, onClose, onToggle } = useDisclosure();
-  const btnRef = React.useRef();
+  const { isOpen, onClose, onToggle } = useDisclosure()
+  const btnRef = React.useRef()
 
-  const socials = useSocials();
+  const socials = useSocials()
 
   return (
     <>
-      <Box bottom={0} d={{ md: "none" }} p={5} pos="fixed" right={0} zIndex={1}>
+      <Box bottom={0} d={{ md: 'none' }} p={5} pos="fixed" right={0} zIndex={1}>
         <IconButton
           aria-label="Open menu"
-          colorScheme="yellow"
+          bgColor={siteConfig.themeColor}
           icon={<Icon as={isOpen ? FaTimes : FaBars} />}
           isRound
           onClick={onToggle}
@@ -41,12 +40,7 @@ export const MobileDrawer: React.FC = () => {
         />
       </Box>
 
-      <Drawer
-        finalFocusRef={btnRef}
-        isOpen={isOpen}
-        onClose={onClose}
-        placement="right"
-      >
+      <Drawer finalFocusRef={btnRef} isOpen={isOpen} onClose={onClose} placement="right">
         <DrawerOverlay>
           <DrawerContent>
             <DrawerHeader p={8}>
@@ -56,32 +50,6 @@ export const MobileDrawer: React.FC = () => {
                 </Link>
               </NextLink>
             </DrawerHeader>
-
-            <DrawerBody
-              as={Stack}
-              fontSize="lg"
-              justify="center"
-              p={8}
-              spacing={4}
-            >
-              {[{ text: "Home", href: "/" }, ...routes].map(
-                ({ text, href, isExternal = false }) => (
-                  <React.Fragment key={href}>
-                    {isExternal ? (
-                      <Link href={href} isExternal onClick={onClose}>
-                        {text}
-                      </Link>
-                    ) : (
-                      <NextLink href={href} key={href}>
-                        <Link href={href} onClick={onClose}>
-                          {text}
-                        </Link>
-                      </NextLink>
-                    )}
-                  </React.Fragment>
-                ),
-              )}
-            </DrawerBody>
 
             <DrawerFooter justifyContent="flex-start" px={4} py={8}>
               {socials.map(([href, SocialIcon]) => (
@@ -101,5 +69,5 @@ export const MobileDrawer: React.FC = () => {
         </DrawerOverlay>
       </Drawer>
     </>
-  );
-};
+  )
+}

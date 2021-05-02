@@ -1,30 +1,28 @@
-import "@/stylesheets/html.css";
+import '@/stylesheets/html.css'
 
-import * as React from "react";
+import * as React from 'react'
+import { Box, ChakraProvider, Stack } from '@chakra-ui/react'
+import { DefaultSeo, SocialProfileJsonLd } from 'next-seo'
+import Head from 'next/head'
+import NProgress from 'nprogress'
+import Router from 'next/router'
+import dynamic from 'next/dynamic'
 
-import { Box, ChakraProvider, Stack } from "@chakra-ui/react";
-import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
+import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
+import { theme } from '@/theme'
+import siteConfig from '~/site-config'
 
-import type { AppProps } from "@/types/next";
-import { Footer } from "@/components/footer";
-import Head from "next/head";
-import NProgress from "nprogress";
-import { Navbar } from "@/components/navbar";
-import Router from "next/router";
-import dynamic from "next/dynamic";
-import { theme } from "@/theme";
-import siteConfig from "~/site-config";
+import type { AppProps } from '@/types/next'
 
-const MobileDrawer = dynamic(() =>
-  import("@/components/mobile-drawer").then((C) => C.MobileDrawer),
-);
+const MobileDrawer = dynamic(() => import('@/components/mobile-drawer').then(C => C.MobileDrawer))
 
-Router.events.on("routeChangeStart", () => NProgress.start());
-Router.events.on("routeChangeComplete", () => NProgress.done());
-Router.events.on("routeChangeError", () => NProgress.done());
+Router.events.on('routeChangeStart', () => NProgress.start())
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 function App(props: AppProps) {
-  const { Component, pageProps, router } = props;
+  const { Component, pageProps, router } = props
 
   return (
     <>
@@ -36,11 +34,11 @@ function App(props: AppProps) {
         title="Welcome!"
         titleTemplate={`%s · ${siteConfig.title}`}
         description={siteConfig.description}
-        canonical={siteConfig.url + (router.asPath || "")}
+        canonical={siteConfig.url + (router.asPath || '')}
         openGraph={{
           title: siteConfig.title,
           description: siteConfig.description,
-          type: "website",
+          type: 'website',
           site_name: siteConfig.title,
           images: [
             {
@@ -52,7 +50,7 @@ function App(props: AppProps) {
           ],
         }}
         twitter={{
-          cardType: "summary_large_image",
+          cardType: 'summary_large_image',
           handle: siteConfig.twitterUsername,
           site: siteConfig.twitterUsername,
         }}
@@ -83,7 +81,7 @@ function App(props: AppProps) {
         )}
       </ChakraProvider>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

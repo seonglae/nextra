@@ -1,48 +1,23 @@
-import * as React from "react";
+import * as React from 'react'
+import { Box, Divider, HStack, Heading, LightMode, Link, Stack } from '@chakra-ui/react'
+import Markdown from 'react-markdown'
+import { NextSeo } from 'next-seo'
 
-import {
-  Box,
-  Divider,
-  HStack,
-  Heading,
-  LightMode,
-  Link,
-  Stack,
-} from "@chakra-ui/react";
+import { baseRenderer } from '@/utils/renderers'
+import siteConfig from '~/site-config'
 
-import type { GetServerSideProps } from "next";
-import { Logo } from "@/components/logo";
-import Markdown from "react-markdown";
-import type { NextPage } from "@/types/next";
-import { NextSeo } from "next-seo";
-import type { SocialImageParams } from "@/types";
-import { baseRenderer } from "@/utils/renderers";
-import siteConfig from "~/site-config";
+import type { NextPage } from '@/types/next'
+import type { GetServerSideProps } from 'next'
+import type { SocialImageParams } from '@/types'
 
-const SocialImagePage: NextPage<SocialImageParams> = ({
-  title,
-  description,
-  path,
-}) => {
+const SocialImagePage: NextPage<SocialImageParams> = ({ title, description, path }) => {
   return (
     <LightMode>
       <NextSeo title={title} description={description} titleTemplate="%s" />
-      <HStack
-        borderColor="gray.100"
-        borderWidth={8}
-        h="512px"
-        id="social-image"
-        p={16}
-        spacing={16}
-        w="1024px"
-      >
-        <Box>
-          <Logo boxSize="2xs" />
-        </Box>
-
+      <HStack borderColor="gray.100" borderWidth={8} h="512px" id="social-image" p={16} spacing={16} w="1024px">
         <Stack>
           <Box>
-            <Heading size={title.length > 40 ? "lg" : "xl"}>{title}</Heading>
+            <Heading size={title.length > 40 ? 'lg' : 'xl'}>{title}</Heading>
           </Box>
 
           <Box fontSize="lg">
@@ -61,25 +36,17 @@ const SocialImagePage: NextPage<SocialImageParams> = ({
         </Stack>
       </HStack>
     </LightMode>
-  );
-};
+  )
+}
 
-SocialImagePage.disableLayout = true;
+SocialImagePage.disableLayout = true
 
-export const getServerSideProps: GetServerSideProps<SocialImageParams> = async ({
-  query,
-}) => {
-  const t = (query.title as string) || siteConfig.title;
-  const d = (query.description as string) || siteConfig.descriptionMd;
-  const p = `${siteConfig.url}${query.path ?? ""}`;
+export const getServerSideProps: GetServerSideProps<SocialImageParams> = async ({ query }) => ({
+  props: {
+    title: (query.title as string) || siteConfig.title,
+    description: (query.description as string) || siteConfig.descriptionMd,
+    path: `${siteConfig.url}${query.path ?? ''}`,
+  },
+})
 
-  return {
-    props: {
-      title: t,
-      description: d,
-      path: p,
-    },
-  };
-};
-
-export default SocialImagePage;
+export default SocialImagePage
