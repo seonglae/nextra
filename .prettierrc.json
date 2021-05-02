@@ -1,13 +1,19 @@
 {
   "overrides": [
     {
-      "files": ["src/pages/_document.tsx"],
+      "files": [
+        "src/pages/_document.tsx"
+      ],
       "options": {
         "printWidth": 999
       }
     }
   ],
-  "semi": true,
-  "singleQuote": false,
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "semi": false,
+  "tabWidth": 2,
+  "printWidth": 125,
+  "arrowParens": "avoid",
   "trailingComma": "all"
 }
