@@ -2,15 +2,15 @@
 /// <reference types="next/types/global" />
 
 // https://fettblog.eu/typescript-react/styles/#load-css-with-webpack
-declare module "*.css" {
+declare module '*.css' {
   interface IClassNames {
-    [className: string]: string;
+    [className: string]: string
   }
-  const classNames: IClassNames;
-  export = classNames;
+  const classNames: IClassNames
+  export = classNames
 }
 
-declare module "*.svg" {
-  const content: any = null;
-  export default content;
+declare module '*.svg' {
+  const content: any = null
+  export default content
 }
