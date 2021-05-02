@@ -1,6 +1,8 @@
 # Minimal Next JS Typescript Template
 
-[Demo](https://seonglae.github.io/next-ts-template)
+[Demo](next-ts-template-ten.vercel.app)
+
+![Example Image](image/example.png)
 
 ## Get Started
 
@@ -20,18 +22,20 @@ yarn dev
 ### Develop Tools
 
 - Prettier
-- Github Actions
-  - Build Pipeline - CI
+- CI/CD
+  - Github Action - CI
   - Vercel - CD
 
 ## Publish
+
 - Sitemap
 - PWA
+
 ## Philosophy
 
 - Atomic Design Pattern
 - Minimalism
 
-
 ## Reference
+
 - [Nuxtplate](https://github.com/nextplate-dev/nextplate)
