@@ -1,4 +1,5 @@
 # Minimal Next JS Typescript Template
+Started from [Nuxtplate](https://github.com/nextplate-dev/nextplate)
 
 [Demo](https://next-ts-template-ten.vercel.app)
 
@@ -38,6 +39,3 @@ yarn dev
 - Atomic Design Pattern
 - Minimalism
 
-## Reference
-
-- [Nuxtplate](https://github.com/nextplate-dev/nextplate)
