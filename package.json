@@ -1,9 +1,9 @@
 {
-  "name": "seongland-ing",
-  "description": "Seognland Landing Page",
+  "name": "nextra",
+  "description": "Minimal Next.js Chakra UI Typescript Template",
   "version": "2.0.0",
   "license": "MIT",
-  "repository": "https://github.com/seongland/seongland-ing.git",
+  "repository": "https://github.com/seonglae/nextra.git",
   "author": "Seonglae Cho <sungle3737@gmail.com>",
   "browserslist": [
     "since 2017"
