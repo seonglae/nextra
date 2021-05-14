@@ -1,6 +1,6 @@
 # Minimal Next JS Typescript Template
 
-[Demo](https://next-ts-template-ten.vercel.app)
+- [Vercel Demo](https://nextra-ts.vercel.app)
 
 ![Example Image](image/example.png)
 
