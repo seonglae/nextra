@@ -9,7 +9,7 @@
     "since 2017"
   ],
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 8000",
     "start": "next start",
     "build": "run-s \"build:**\"",
     "build:scripts": "node scripts/build.js",
@@ -23,15 +23,12 @@
     "@chakra-ui/theme-tools": "^1.0.3",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
-    "chrome-aws-lambda": "^5.5.0",
     "favicons": "^6.2.0",
-    "framer-motion": "^3.2.1",
     "next": "^10.0.5",
     "next-seo": "^4.17.0",
     "nprogress": "^0.2.0",
-    "prism-react-renderer": "^1.1.1",
-    "puppeteer": "^5.5.0",
     "react": "^17.0.1",
+    "framer-motion": "^3.2.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
     "react-markdown": "^5.0.3"
@@ -40,14 +37,12 @@
     "@babel/core": "^7.12.10",
     "@types/node": "^14.14.21",
     "@types/nprogress": "^0.2.0",
-    "@types/puppeteer": "^5.4.2",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "copy": "^0.3.2",
     "cross-fetch": "^3.1.4",
     "eslint": "^7.25.0",
     "next-sitemap": "^1.4.5",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
   }
