@@ -1,5 +1,5 @@
 # Minimal Next JS Typescript Template
-Started from [Nuxtplate](https://github.com/nextplate-dev/nextplate)
+Fork of [Nuxtplate](https://github.com/nextplate-dev/nextplate)
 
 - [Vercel Demo](https://nextra-ts.vercel.app)
 
