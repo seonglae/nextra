@@ -25,9 +25,7 @@ module.exports = {
       },
     ]
   },
-  future: {
-    webpack5: true,
-  },
+  webpack5: true,
 
   // https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode
   reactStrictMode: true,
