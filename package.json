@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@types/node": "^14.14.21",
+    "@types/node": "^16.11.25",
     "@types/nprogress": "^0.2.0",
     "@types/puppeteer": "^5.4.2",
     "@types/react": "^17.0.0",
