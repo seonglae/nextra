@@ -41,7 +41,7 @@
     "@types/node": "^16.11.26",
     "@types/nprogress": "^0.2.0",
     "@types/puppeteer": "^5.4.5",
-    "@types/react": "^17.0.43",
+    "@types/react": "^18.0.1",
     "@types/react-dom": "^17.0.14",
     "copy": "^0.3.2",
     "cross-fetch": "^3.1.5",
