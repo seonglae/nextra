@@ -11,8 +11,8 @@ Fork of [Nextplate](https://github.com/nextplate-dev/nextplate)
 - Or Clone this Project
 ```bash
 git clone https://github.com/seonglae/next-ts-template
-yarn
-yarn dev
+pnpm i
+pnpm dev
 ```
 
 ## Components
