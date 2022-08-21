@@ -1,4 +1,4 @@
-const descriptionMd = `Nuxt Typescript Template`
+const descriptionMd = `Next Chakra UI Typescript Template`
 
 const description = descriptionMd
   .replace(/\[([^\]]+)\](\([^)]+\)|\[[^\]]+\])/g, '$1')
@@ -7,14 +7,14 @@ const description = descriptionMd
   .trim()
 
 module.exports = {
-  title: 'Seongland',
+  title: 'Nextra',
   descriptionMd,
   description,
-  url: 'https://www.seongland.com',
+  url: 'https://nextra-ts.vercel.app',
   twitterUsername: '@SeonglaeC',
   email: 'seongle3737@gmail.com',
   socials: {
-    GitHub: 'https://github.com/seongland/seongland-ing',
+    GitHub: 'https://github.com/seonglae/nextra',
     Twitter: 'https://twitter.com/SeonglaeC',
   },
   bgColor: '#1A202C',
