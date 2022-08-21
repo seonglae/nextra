@@ -14,7 +14,7 @@ const HomePage: NextPage = () => {
       <NextSeo title={siteConfig.title} titleTemplate="%s" />
       <Stack alignItems="center" px={8} spacing={4} textAlign="center" w="full">
         <Heading size="2xl">{siteConfig.title}</Heading>
-        <Heading fontWeight="normal" pb={8} size="md">
+        <Heading fontWeight="normal" pb={4} size="md">
           {siteConfig.description}
         </Heading>
 
@@ -23,17 +23,10 @@ const HomePage: NextPage = () => {
             <Button
               as="a"
               bgColor={siteConfig.themeColor}
-              href="https://doc.seongland.com"
-              leftIcon={<Icon as={FaCode} />}
               target="_blank"
+              href={siteConfig.socials.GitHub}
+              leftIcon={<Icon as={FaGithub} />}
             >
-              {' '}
-              View usage
-            </Button>
-          </WrapItem>
-
-          <WrapItem>
-            <Button as="a" href={siteConfig.socials.GitHub} leftIcon={<Icon as={FaGithub} />}>
               View source on GitHub
             </Button>
           </WrapItem>

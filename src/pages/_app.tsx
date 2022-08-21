@@ -57,7 +57,7 @@ function App(props: AppProps) {
       />
 
       <SocialProfileJsonLd
-        type="person"
+        type="Person"
         name={siteConfig.title}
         url={siteConfig.url}
         sameAs={Object.values(siteConfig.socials)}

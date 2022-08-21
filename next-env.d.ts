@@ -1,14 +1,5 @@
 /// <reference types="next" />
-/// <reference types="next/types/global" />
-declare module '*.css' {
-  interface IClassNames {
-    [className: string]: string
-  }
-  const classNames: IClassNames
-  export = classNames
-}
+/// <reference types="next/image-types/global" />
 
-declare module '*.svg' {
-  const content: any = null
-  export default content
-}
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/basic-features/typescript for more information.
