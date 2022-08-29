@@ -39,18 +39,18 @@
     "react-markdown": "^5.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
-    "@types/node": "^16.11.52",
+    "@babel/core": "^7.18.13",
+    "@types/node": "^16.11.56",
     "@types/nprogress": "^0.2.0",
     "@types/puppeteer": "^5.4.6",
     "@types/react": "^17.0.48",
     "@types/react-dom": "^17.0.17",
     "copy": "^0.3.2",
     "cross-fetch": "^3.1.5",
-    "eslint": "^8.22.0",
+    "eslint": "^8.23.0",
     "next-sitemap": "^1.9.12",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.2"
   }
 }
