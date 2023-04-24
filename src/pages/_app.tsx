@@ -1,6 +1,6 @@
 import '@/stylesheets/html.css'
 
-import * as React from 'react'
+import React from 'react'
 import { Box, ChakraProvider, Stack } from '@chakra-ui/react'
 import { DefaultSeo, SocialProfileJsonLd } from 'next-seo'
 import Head from 'next/head'
@@ -13,7 +13,7 @@ import { Footer } from '@/components/footer'
 import { theme } from '@/theme'
 import siteConfig from '~/site-config'
 
-import type { AppProps } from '@/types/next'
+import type { AppProps } from 'next/app'
 
 const MobileDrawer = dynamic(() => import('@/components/mobile-drawer').then(C => C.MobileDrawer))
 
@@ -64,21 +64,16 @@ function App(props: AppProps) {
       />
 
       <ChakraProvider resetCSS theme={theme}>
-        {Component.disableLayout ? (
-          <Component {...pageProps} />
-        ) : (
-          <>
-            <Stack justify="space-between" minH="100vh" spacing={0}>
-              <Navbar />
-              <Box as="main">
-                <Component {...pageProps} />
-              </Box>
-              <Footer />
-            </Stack>
-
-            <MobileDrawer />
-          </>
-        )}
+        <>
+          <Stack justify="space-between" minH="100vh" spacing={0}>
+            <Navbar />
+            <Box as="main">
+              <Component {...pageProps} />
+            </Box>
+            <Footer />
+          </Stack>
+          <MobileDrawer />
+        </>
       </ChakraProvider>
     </>
   )

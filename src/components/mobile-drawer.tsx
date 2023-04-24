@@ -28,7 +28,7 @@ export const MobileDrawer: React.FC = () => {
 
   return (
     <>
-      <Box bottom={0} d={{ md: 'none' }} p={5} pos="fixed" right={0} zIndex={1}>
+      <Box bottom={0} p={5} pos="fixed" right={0} zIndex={1}>
         <IconButton
           aria-label="Open menu"
           bgColor={siteConfig.themeColor}
@@ -44,11 +44,9 @@ export const MobileDrawer: React.FC = () => {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerHeader p={8}>
-              <NextLink href="/">
-                <Link href="/" onClick={onClose} variant="link">
-                  {siteConfig.title}
-                </Link>
-              </NextLink>
+              <Link href="/" onClick={onClose} variant="link">
+                {siteConfig.title}
+              </Link>
             </DrawerHeader>
 
             <DrawerFooter justifyContent="flex-start" px={4} py={8}>

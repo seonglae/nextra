@@ -1,12 +1,12 @@
 import * as React from 'react'
 
 import { Button, Heading, Icon, Stack, Wrap, WrapItem } from '@chakra-ui/react'
-import { FaCode, FaGithub } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 import { NextSeo } from 'next-seo'
 
 import siteConfig from '~/site-config'
 
-import type { NextPage } from '@/types/next'
+import type { NextPage } from 'next'
 
 const HomePage: NextPage = () => {
   return (

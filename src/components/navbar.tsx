@@ -13,11 +13,9 @@ export const Navbar: React.FC = () => {
 
   return (
     <HStack as="nav" fontSize="md" p={4} spacing={0}>
-      <NextLink href="/">
-        <Link fontWeight="bold" href="/" p={4} variant="link">
-          {siteConfig.title}
-        </Link>
-      </NextLink>
+      <Link fontWeight="bold" href="/" p={4} variant="link">
+        {siteConfig.title}
+      </Link>
 
       <HStack flexGrow={1} justify="flex-end" p={4} spacing={{ base: 0, sm: 2 }}>
         {socials.map(([href, SocialIcon]) => (
