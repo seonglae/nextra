@@ -1,5 +1,4 @@
 module.exports = {
-  // https://nextjs.org/docs/api-reference/next.config.js/headers
   async headers() {
     return [
       {
@@ -25,17 +24,5 @@ module.exports = {
       },
     ]
   },
-
-  // https://nextjs.org/docs/api-reference/next.config.js/react-strict-mode
   reactStrictMode: true,
-
-  // https://nextjs.org/docs/api-reference/next.config.js/rewrites
-  async rewrites() {
-    return [
-      {
-        source: '/social.png',
-        destination: '/api/social-image',
-      },
-    ]
-  },
 }

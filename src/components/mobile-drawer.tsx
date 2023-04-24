@@ -28,7 +28,7 @@ export const MobileDrawer: React.FC = () => {
 
   return (
     <>
-      <Box bottom={0} d={{ md: 'none' }} p={5} pos="fixed" right={0} zIndex={1}>
+      <Box bottom={0} p={5} pos="fixed" right={0} zIndex={1}>
         <IconButton
           aria-label="Open menu"
           bgColor={siteConfig.themeColor}
