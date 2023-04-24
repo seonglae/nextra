@@ -44,11 +44,9 @@ export const MobileDrawer: React.FC = () => {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerHeader p={8}>
-              <NextLink href="/">
-                <Link href="/" onClick={onClose} variant="link">
-                  {siteConfig.title}
-                </Link>
-              </NextLink>
+              <Link href="/" onClick={onClose} variant="link">
+                {siteConfig.title}
+              </Link>
             </DrawerHeader>
 
             <DrawerFooter justifyContent="flex-start" px={4} py={8}>
