@@ -52,8 +52,8 @@ devDependencies:
     specifier: ^7.21.8
     version: 7.21.8
   '@types/node':
-    specifier: ^18.16.5
-    version: 18.16.5
+    specifier: ^18.16.7
+    version: 18.16.7
   '@types/nprogress':
     specifier: ^0.2.0
     version: 0.2.0
@@ -2138,8 +2138,8 @@ packages:
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
     dev: false
 
-  /@types/node@18.16.5:
-    resolution: {integrity: sha512-seOA34WMo9KB+UA78qaJoCO20RJzZGVXQ5Sh6FWu0g/hfT44nKXnej3/tCQl7FL97idFpBhisLYCTB50S0EirA==}
+  /@types/node@18.16.7:
+    resolution: {integrity: sha512-MFg7ua/bRtnA1hYE3pVyWxGd/r7aMqjNOdHvlSsXV3n8iaeGKkOaPzpJh6/ovf4bEXWcojkeMJpTsq3mzXW4IQ==}
     dev: true
 
   /@types/nprogress@0.2.0:
