@@ -19,9 +19,9 @@
     "format:src": "prettier --write \"src/**/*.{css,js,ts,tsx}\""
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.0",
-    "@chakra-ui/system": "^2.6.0",
-    "@chakra-ui/theme-tools": "^2.1.0",
+    "@chakra-ui/react": "^2.8.1",
+    "@chakra-ui/system": "^2.6.1",
+    "@chakra-ui/theme-tools": "^2.1.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "favicons": "^6.2.2",
@@ -37,13 +37,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.22.17",
-    "@types/node": "^18.17.14",
+    "@types/node": "^18.17.15",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "copy": "^0.3.2",
     "cross-fetch": "^4.0.0",
-    "eslint": "^8.48.0",
+    "eslint": "^8.49.0",
     "next-sitemap": "^4.2.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
