@@ -36,11 +36,11 @@
     "react-markdown": "^9.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.0",
-    "@types/node": "^18.18.4",
+    "@babel/core": "^7.23.2",
+    "@types/node": "^18.18.5",
     "@types/nprogress": "^0.2.1",
-    "@types/react": "^18.2.25",
-    "@types/react-dom": "^18.2.11",
+    "@types/react": "^18.2.28",
+    "@types/react-dom": "^18.2.13",
     "copy": "^0.3.2",
     "cross-fetch": "^4.0.0",
     "eslint": "^8.51.0",
