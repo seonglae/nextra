@@ -36,7 +36,7 @@
     "react-markdown": "^9.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.5",
+    "@babel/core": "^7.29.6",
     "@types/node": "^20.10.2",
     "@types/nprogress": "^0.2.3",
     "@types/react": "^18.2.40",
