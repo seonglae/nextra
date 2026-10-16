@@ -1,0 +1,15 @@
+# Security updates only: open-pull-requests-limit: 0 turns version updates off, and the
+# group below batches the security PRs that Dependabot still opens.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directories:
+      - '/'
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    groups:
+      security:
+        applies-to: security-updates
+        patterns:
+          - '*'
